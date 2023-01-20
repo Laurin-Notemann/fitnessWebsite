@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "build": "npx swc src -d dist",
+        "start": "node dist/js"
+    },
+  "dependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.3.27",
+    "dotenv": "^16.0.3",
+    "node-postgres": "^0.6.2",
+    "swagger": "^0.0.1",
+    "typescript": "^4.9.4"
+  }
+}
