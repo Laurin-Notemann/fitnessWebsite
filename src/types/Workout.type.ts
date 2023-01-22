@@ -1,6 +1,6 @@
 interface Workout {
     id: string
-    date: Date | number
+    date: Date
 
     exercises: Exercise[]
 }
@@ -9,7 +9,7 @@ interface Workout {
 
 const exampleWorkout: Workout = {
     id: "1",
-    date: 3,
+    date: new Date(),
 
     exercises: [
         {
@@ -22,7 +22,7 @@ const exampleWorkout: Workout = {
                 "triceps"
             ],
             type: "BODYWEIGHT",
-            steps: [
+            sets: [
                 {
                     id: "1",
                     weight: 25,
@@ -50,7 +50,7 @@ const exampleWorkout: Workout = {
                 "biceps"
             ],
             type: "BODYWEIGHT",
-            steps: [
+            sets: [
                 {
                     id: "1",
                     weight: 25,

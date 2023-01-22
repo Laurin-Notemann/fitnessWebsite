@@ -10,11 +10,11 @@ interface BodyWeightExercise extends BaseExercise {
 interface BaseExercise {
     id: string
     name: string
-    icon: url
-    description: string
+    icon?: url
+    description?: string
     trainedBodyAreas: BodyArea["id"][]
 
-    steps: Sets[]
+    sets: Sets[]
 }
 
 type Sets = {

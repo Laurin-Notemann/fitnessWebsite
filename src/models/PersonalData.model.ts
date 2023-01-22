@@ -4,7 +4,7 @@ import { User } from "./User.model";
 @Entity()
 export class PersonalData{
     @PrimaryGeneratedColumn('uuid')
-    id: number
+    id: string
 
     @Column()
     weight: number
