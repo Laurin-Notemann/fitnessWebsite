@@ -1,4 +1,5 @@
 interface BaseExercise {
+
     name: string
     icon: url
     descriptions: string
@@ -12,8 +13,6 @@ interface BodyWeightExercise {
     type: "BODYWEIGHT"
 }
 
-type url = string
-
 type Exercise = ResistanceExercise | BodyWeightExercise
 
 type WorkoutStep = {
@@ -22,12 +21,4 @@ type WorkoutStep = {
     weightKg: number
 
     reps: number
-}
-
-interface Workout {
-
-}
-
-interface PersonalData{
-
 }
