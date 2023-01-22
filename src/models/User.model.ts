@@ -1,11 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { PersonalData } from "./PersonalData.model";
 
 type hash = string
 
 @Entity()
 export class User{
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     id: number
 
     @Column()
@@ -16,4 +17,8 @@ export class User{
 
     @Column()
     password: hash
+
+    @OneToOne(() => PersonalData)
+    @JoinColumn()
+    personalData: PersonalData
 }

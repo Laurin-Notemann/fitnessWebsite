@@ -1,26 +1,23 @@
 import { fitnessDB } from "../connection/connection";
 import { User } from "../models/User.model";
 
-export const  getAllUsers = () => {
 
+export class UserController {
+    // get User by email and password
+    static loginUserByEmail = (email: string, password: string) => {
+    }
+    // get User by email and password
+    static loginUserByName = (name: string, password: string) => {
+    }
+    // add new User
+    static registerUser = (name: string, email: string, password: string) => {
+    }
+
+    static updateUser = (name = "", email = "", password = "") => {
+    }
+
+    static delteUserById = (id: string) => {
+    }
 }
 
-export const getUserById = (id: string) => {
 
-}
-
-export const loginUser = (email: string, password: string) =>{
-
-}
-
-export const registerUser = () => {
-
-}
-
-export const updateUserById = (id: string) => {
-
-}
-
-export const delteUserById = (id: string) => {
-
-}

@@ -1,24 +1,52 @@
+interface BodyArea {
+    id: string
+    name: string
+}
+
 interface BaseExercise {
 
+    id: string
     name: string
     icon: url
-    descriptions: string
+    description: string
     trainedBodyAreas: string[]
 }
 
 interface ResistanceExercise extends BaseExercise {
     type: "RESISTANCE"
 }
-interface BodyWeightExercise {
+interface BodyWeightExercise extends BaseExercise {
     type: "BODYWEIGHT"
 }
 
 type Exercise = ResistanceExercise | BodyWeightExercise
 
-type WorkoutStep = {
+interface WorkoutStep {
+
+    id: string
     exerciseId: string
+    weightKg?: number
+    reps?: number
+    durationMs?: number
+}
 
-    weightKg: number
+interface Workout {
 
-    reps: number
+    id: string
+    date: Date
+
+    steps: WorkoutStep[]
+}
+
+const Exercises: Record<string, Exercise> = {
+
+    "PUSHUPS": {
+
+        id: "PUSHUPS",
+        name: "Pushups",
+        type: "BODYWEIGHT",
+        icon: "",
+        description: "",
+        trainedBodyAreas: ["SACK", "ARSCH"],
+    }
 }

@@ -3,7 +3,7 @@ import { User } from "./User.model";
 
 @Entity()
 export class PersonalData{
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn('uuid')
     id: number
 
     @Column()
@@ -11,8 +11,4 @@ export class PersonalData{
 
     @Column()
     height: number
-
-    @OneToOne(() => User)
-    @JoinColumn()
-    user: User
 }
