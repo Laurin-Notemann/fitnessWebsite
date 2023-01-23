@@ -1,3 +1,5 @@
+import { Exercise } from "./Exercise.type"
+
 interface Workout {
     id: string
     date: Date

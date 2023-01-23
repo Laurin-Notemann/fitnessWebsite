@@ -1,4 +1,6 @@
-type Exercise = ResistanceExercise | BodyWeightExercise
+import { url } from "./types"
+
+export type Exercise = ResistanceExercise | BodyWeightExercise
 
 interface ResistanceExercise extends BaseExercise {
     type: "RESISTANCE"

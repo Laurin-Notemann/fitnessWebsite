@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from "typeorm";
 import { Exercise } from "./Exercise.model";
 
 @Entity()
@@ -7,5 +7,5 @@ export class BodyArea{
     id: string
 
     @ManyToOne(() => Exercise, (exercise) => exercise.trainedBodyAreas)
-    exercise: Exercise
+    exercise: Relation<Exercise>
 }

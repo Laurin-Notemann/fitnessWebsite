@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn, Relation } from "typeorm";
 import { PersonalData } from "./PersonalData.model";
 
 type hash = string
@@ -15,9 +15,9 @@ export class User{
     email: string
 
     @Column()
-    password: hash
+    password: string
 
     @OneToOne(() => PersonalData)
     @JoinColumn()
-    personalData: PersonalData
+    personalData: Relation<PersonalData>
 }

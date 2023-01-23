@@ -1,3 +1,4 @@
-type url = string
+export type url = string
 
-type hash = string
+export type hash = string
+

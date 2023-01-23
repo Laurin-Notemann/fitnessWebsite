@@ -1,5 +1,5 @@
 interface PersonalData{
-    id: number
+    id: string
     weight: number
     height: number
 }

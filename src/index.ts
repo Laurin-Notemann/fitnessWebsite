@@ -6,5 +6,5 @@ const PORT = 3000
 connectToFitnessDB()
 
 app.listen(PORT, () => (
-    console.log("server listens on port: ", PORT)
+    console.log("Server listens on port: ", PORT)
 ))

@@ -1,13 +1,13 @@
 import express from "express"
-
-
+import { userRouter } from "./user.route"
+import cors from "cors"
 
 export const app = express()
 
-export const router = express.Router()
-router.use(express.json())
+app.use(userRouter)
 
-app.use(router)
-
-
-
+app.use(
+    cors({
+        origin: "*"
+    })
+)
